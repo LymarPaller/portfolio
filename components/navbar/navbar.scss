@@ -21,7 +21,6 @@
         align-items: center;
 
         ul{
-            width: 30rem;
             gap: 3rem;
             display: flex;
             justify-content: center;
@@ -34,6 +33,7 @@
             a {
                 color: var(--grey);
                 transition: 600ms;
+                text-align: center;
             }
 
             a:hover,
