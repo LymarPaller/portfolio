@@ -14,8 +14,8 @@
     --paragraph-font-weight: 300;
     --paragraph-hilight-weight: 500;
 
-    --background-color: #d3d3d3;
-    --container-bg-color: #fff;
+    --background-color: #2D2D2D;
+    --container-bg-color: #232323;
     --primary-color: #E20026;
     --font-color: #000;
 
@@ -31,6 +31,7 @@
     //set global style
 
     font-family: var(--secondary-font);
+    color: white;
 }
 
 body{

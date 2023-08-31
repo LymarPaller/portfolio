@@ -2,7 +2,6 @@ import "./home.scss"
 import FacebookSvg from "../../components/svg/FacebookSvg"
 import InstagramSvg from "../../components/svg/InstagramSvg"
 import LinkedinSvg from "../../components/svg/LinkedinSvg"
-import profileBlack from "../../images/profile-black.png"
 
 function Home () {
     return (
@@ -32,7 +31,10 @@ function Home () {
                     
                 </div>
             </section>
-            <section></section>
+
+            <section className="introduction-container">
+
+            </section>
             <section></section>
             <section></section>
             <section></section>

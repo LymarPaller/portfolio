@@ -4,11 +4,11 @@
     height: 100vh;
 
     .profile{
-        margin-top: 3rem;
-        // background-color: aquamarine;
+        height: 90vh;
         display: flex;
         justify-content: center;
         align-items: center;
+
         .name-container{
             margin-inline: 3rem;
             display: flex;
@@ -20,7 +20,8 @@
             }
             h1{
                 font-family: var(--main-font);
-                font-size: 3rem;
+                color: var(--primary-color);
+                font-size: 4rem;
                 font-weight: var(--title-font-weight);
                 text-transform: uppercase;
             }
@@ -47,17 +48,27 @@
         }
 
         .photo-container{
-
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: end;
             margin-inline: 3rem;
+
             div{
-                width: 25vw;
-                height: 60vh;
-                background-image: url(../../images/profile-black.png);
+                width: 30vw;
+                height: 90%;
+                background-image: url(../../images/profile-red.png);
                 background-position: top;
                 background-repeat: no-repeat;
                 background-size: cover;
             }
         }
 
+    }
+
+    .introduction-container{
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--container-bg-color);
     }
 }

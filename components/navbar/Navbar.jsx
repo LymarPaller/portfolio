@@ -24,7 +24,6 @@ function Navbar () {
                     </ul>
                 </nav>
                 <div>
-                    <button>Darkmode</button>
                     <button>Download</button>
                 </div>
             </div>
