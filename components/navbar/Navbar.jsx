@@ -8,7 +8,7 @@ function Navbar () {
 
     return (
         <>
-            <div className="navbar-container">
+            <div className="navbar-container container-fluid">
                 <img src={logo} alt="lymar logo"/>
                 <nav>
                     <ul>

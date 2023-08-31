@@ -59,7 +59,7 @@
             margin-inline: 3rem;
 
             div{
-                min-width: 28rem;
+                min-width: 30vw;
                 height: 90%;
                 background-image: url(../../images/profile-red.png);
                 background-position: top;
@@ -71,7 +71,7 @@
     }
 
     .introduction-container{
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         background-color: var(--container-bg-color);
     }

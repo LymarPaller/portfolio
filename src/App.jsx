@@ -19,13 +19,13 @@ function App() {
         <Route path="/webdev" element={
           <>
             <Navbar/>
-            <Maintenance/>
+            {/* <Maintenance/> */}
           </>
         }/>
         <Route path="/*" element={
           <>
             <Navbar/>
-            <Maintenance/>
+            {/* <Maintenance/> */}
           </>
         }/>
       </Routes>
