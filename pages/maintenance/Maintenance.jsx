@@ -19,7 +19,7 @@ function Maintenance () {
 
     return (
         <>
-        <div className="animation-container" ref={animationContainer}></div>
+            <div className="animation-container" ref={animationContainer}></div>
         </>
 
 

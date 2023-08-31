@@ -2,6 +2,7 @@ import "./home.scss"
 import FacebookSvg from "../../components/svg/FacebookSvg"
 import InstagramSvg from "../../components/svg/InstagramSvg"
 import LinkedinSvg from "../../components/svg/LinkedinSvg"
+import { Link } from "react-router-dom"
 
 function Home () {
     return (
@@ -18,9 +19,15 @@ function Home () {
                     </div>
 
                     <div className="social-container">
-                        <FacebookSvg/>
-                        <InstagramSvg/>
-                        <LinkedinSvg/>
+                        <a href="https://www.facebook.com/cantleavethisempty" target="blank">
+                            <FacebookSvg/>
+                        </a>
+                        <a href="https://www.instagram.com" target="blank">
+                            <InstagramSvg/>
+                        </a>
+                        <a href="https://www.linkedin.com" target="blank">
+                            <LinkedinSvg/>
+                        </a>
                     </div>
                 </div>
                 
