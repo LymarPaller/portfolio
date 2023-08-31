@@ -1,0 +1,13 @@
+@import url(../../src/main.scss);
+
+h1{
+    font-family: var(--main-font);
+    font-weight: var(--title-font-weight);
+}
+
+.animation-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #444444;
+    padding: 5rem;
+}

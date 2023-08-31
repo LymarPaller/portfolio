@@ -1,0 +1,62 @@
+@import url(../../src/main.scss);
+
+.navbar-container{
+    height: 5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-inline: 3rem;
+    gap: 2rem;
+
+    img{
+        height: 3rem;
+        flex: 1;
+    }
+
+    nav{
+        padding-top: 2rem;
+        flex: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul{
+            gap: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            padding-left: 0;
+            margin-bottom: 0;
+
+
+            a {
+                color: var(--grey);
+                transition: 600ms;
+            }
+
+            a:hover,
+            a:active,
+            a:focus{
+                color: var(--black);
+                font-weight: 500;
+            }
+        }
+    }
+    div{
+        padding-top: 2rem;
+        flex: 3;
+        display: flex;
+        justify-content: end;
+        gap: 2rem;
+        
+        button {
+            margin-right: 2rem;
+            border-radius: .5rem;
+            border: 0;
+            width: 6rem;
+            background-color: var(--primary-color);
+            color: white;
+        }
+    }
+}
