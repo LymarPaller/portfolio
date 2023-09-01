@@ -33,6 +33,7 @@ function Home () {
                 
                 <div className="photo-container">
                     <div>
+                        {/* DONT DELETE */}
                         {/* <img src={profileBlack} alt="profile" /> */}
                     </div>
                     
@@ -40,11 +41,49 @@ function Home () {
             </section>
 
             <section className="introduction-container">
+                <div className="intro-wrapper">
+                    <h1>Introduction</h1>
+                    <p>
+                        Greetings, I'm Lymar Paul Paller,  a 28-year-old freelance graphic designer with six years of expertise.
+                        Recently, I graduated from the KODEGO Bootcamp, transitioning into the world of web development.
+                        Feel free to call me Lymar a moniker that reflects both my professional persona and my approachability.
+                        I look forward to weaving my graphic design background into the world of web development,
+                        creating holistic digital experiences that resonate with users.
+                    </p>
+                </div>
+            </section>
+
+            <section className="highlights-container">
+                <div className="highlights-wrapper">
+                    <h1>Portfolio Highlights</h1>
+                    <div className="highlight-card">
+
+                        <div className="card-wrapper">
+                            <div className="card">
+                                <div className="icon-div"></div>
+                                <h2>Full-Stack Web Developer</h2>
+                                <a href="#"><p>Details</p></a>
+                            </div>
+                        </div>
+
+                        <div className="card-wrapper">
+                            <div className="card">
+                                <div className="icon-div"></div>
+                                <h2>Graphic Designer</h2>
+                                <a href="#"><p>Details</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </section>
-            <section></section>
-            <section></section>
-            <section></section>
+
+            <section className="contacts-container">
+                <div className="contacts-wrapper">
+                    <h1>Contacts</h1>
+                </div>
+
+            </section>
         </div>
         </>
     )
