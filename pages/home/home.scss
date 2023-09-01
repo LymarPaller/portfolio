@@ -1,5 +1,12 @@
 @import url(../../src/main.scss);
 
+
+                
+svg{
+    width: 1.25rem;
+    fill: var(--primary-color);
+}
+
 section{
     display: flex;
     justify-content: center;
@@ -44,10 +51,6 @@ section{
                 display: flex;
                 margin-top: 2rem;
                 gap: 2rem;
-                svg{
-                    width: 1.25rem;
-                    fill: var(--primary-color);
-                }
             }
         }
 
@@ -160,14 +163,48 @@ section{
     .contacts-container{
         width: 100%;
         height: 100vh;
+        background-color: var(--container-bg-color);
 
         .contacts-wrapper{
+            width: 50vw;
+            background-color: var(--container-bg-color);
+
             h1{
                 font-family: var(--main-font);
                 font-weight: 500;
                 color: var(--white);
                 text-align: center;
                 margin-bottom: 4rem;
+            }
+
+            .contacts-card{
+                display: flex;
+
+
+                ul{
+                    flex: 1;
+                    height: 50vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: start;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+
+                    li{
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 8rem;
+                        margin-left: 4rem;
+                        margin-right: auto;
+
+                        a{
+                            display: flex;
+                            gap: 1rem;
+                        }
+                    }
+                }
             }
         }
     }

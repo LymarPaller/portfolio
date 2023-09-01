@@ -2,7 +2,9 @@ import "./home.scss"
 import FacebookSvg from "../../components/svg/FacebookSvg"
 import InstagramSvg from "../../components/svg/InstagramSvg"
 import LinkedinSvg from "../../components/svg/LinkedinSvg"
-import { Link } from "react-router-dom"
+import PhoneSvg from "../../components/svg/PhoneSvg"
+import EmailSvg from "../../components/svg/EmailSvg"
+import TwitterSvg from "../../components/svg/TwitterSvg"
 
 function Home () {
     return (
@@ -81,6 +83,48 @@ function Home () {
             <section className="contacts-container">
                 <div className="contacts-wrapper">
                     <h1>Contacts</h1>
+                    <div className="contacts-card">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <PhoneSvg/>
+                                    <p>09271444046</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <EmailSvg/>
+                                    <p>lymar.paller101@gmail.com</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <LinkedinSvg/>
+                                    <p>@placeholder</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <FacebookSvg/>
+                                    <p>@placeholder</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <InstagramSvg/>
+                                    <p>@placeholder</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <TwitterSvg/>
+                                    <p>@placeholder</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
             </section>
