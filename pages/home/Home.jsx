@@ -9,6 +9,7 @@ import Navbar from "../../components/navbar/Navbar"
 import webDevSvg from "../../images/iconHighlight1.svg"
 import graphicSvg from "../../images/iconHighlight2.svg"
 import { useEffect } from "react"
+import { Link } from "react-router-dom"
 
 function Home () {
 
@@ -126,7 +127,7 @@ function Home () {
                 <div className="highlights-wrapper">
                     <h1>Portfolio Highlights</h1>
                     <div className="highlight-card">
-                        <a href="./webdev">
+                        <Link to="./webdev">
                             <div className="card-wrapper dev-wrapper">
                                 <div className="card dev-card">
                                     <div className="icon-div">{/* circle div dont delete */}</div>
@@ -135,18 +136,18 @@ function Home () {
                                     <p className="dev-button">View Details</p>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                         
-                        <a href="./">
+                        <Link to="./">
                             <div className="card-wrapper artist-wrapper">
                                 <div className="card artist-card">
                                     <div className="icon-div">{/* circle div dont delete */}</div>
                                     <img src={graphicSvg} alt="graphic" className="artist-image" />
                                     <h2 className="artist-title">Graphic Designer</h2>
-                                    <a href="#" className="artist-button"><p>View Details</p></a>
+                                    <p className="artist-button">View Details</p>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
