@@ -5,11 +5,78 @@ import LinkedinSvg from "../../components/svg/LinkedinSvg"
 import PhoneSvg from "../../components/svg/PhoneSvg"
 import EmailSvg from "../../components/svg/EmailSvg"
 import TwitterSvg from "../../components/svg/TwitterSvg"
+import Navbar from "../../components/navbar/Navbar"
+import webDevSvg from "../../images/iconHighlight1.svg"
+import graphicSvg from "../../images/iconHighlight2.svg"
+import { useEffect } from "react"
 
 function Home () {
+
+    useEffect(() => {
+        const devCard = document.querySelector(".dev-card");
+        const devWrapper = document.querySelector(".dev-wrapper");
+        const artCard = document.querySelector(".artist-card");
+        const artWrapper = document.querySelector(".artist-wrapper");
+        const devImage = document.querySelector(".dev-image");
+        const devTitle = document.querySelector(".dev-title");
+        const devButton = document.querySelector(".dev-button");
+        const artImage = document.querySelector(".artist-image");
+        const artTitle = document.querySelector(".artist-title");
+        const artButton = document.querySelector(".artist-button");
+        
+        function handleMouseMove(e, card) {
+            let xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+            let yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        }
+        
+        devWrapper.addEventListener("mousemove", (e) => {handleMouseMove(e, devCard);});
+        
+        artWrapper.addEventListener("mousemove", (e) => {handleMouseMove(e, artCard);});
+
+        //mouse hover in
+
+        devWrapper.addEventListener("mouseenter", e => {
+            devCard.style.transition = "100ms";
+
+            devImage.style.transform = "translateZ(100px)";
+            devTitle.style.transform = "translateZ(100px)";
+            devButton.style.transform = "translateZ(100px)";
+        })
+
+        artWrapper.addEventListener("mouseenter", e => {
+            artCard.style.transition = "100ms";
+
+            artImage.style.transform = "translateZ(100px)";
+            artTitle.style.transform = "translateZ(100px)";
+            artButton.style.transform = "translateZ(100px)";
+        })
+
+        //mouse hover out
+
+        devWrapper.addEventListener("mouseleave", e => {
+            devCard.style.transform = `rotateY(0deg) rotateX(0deg)`;
+            devCard.style.transition = "all 500ms ease";
+
+            devImage.style.transform = "translateZ(0)";
+            devTitle.style.transform = "translateZ(0)";
+            devButton.style.transform = "translateZ(0)";
+        })
+        artWrapper.addEventListener("mouseleave", e => {
+            artCard.style.transform = `rotateY(0deg) rotateX(0deg)`;
+            artCard.style.transition = "all 500ms ease";
+            
+            artImage.style.transform = "translateZ(0)";
+            artTitle.style.transform = "translateZ(0)";
+            artButton.style.transform = "translateZ(0)";
+        })
+    }, [])
+
     return (
         <>
         <div className="home-container">
+            <Navbar/>
             <section className="profile">
                 <div className="name-container">
                     <p className="intro">Hello, I'm</p>
@@ -59,22 +126,27 @@ function Home () {
                 <div className="highlights-wrapper">
                     <h1>Portfolio Highlights</h1>
                     <div className="highlight-card">
-
-                        <div className="card-wrapper">
-                            <div className="card">
-                                <div className="icon-div"></div>
-                                <h2>Full-Stack Web Developer</h2>
-                                <a href="#"><p>Details</p></a>
+                        <a href="./webdev">
+                            <div className="card-wrapper dev-wrapper">
+                                <div className="card dev-card">
+                                    <div className="icon-div">{/* circle div dont delete */}</div>
+                                    <img src={webDevSvg} alt="web dev" className="dev-image"/>
+                                    <h2 className="dev-title">Full-Stack Web Developer</h2>
+                                    <p className="dev-button">View Details</p>
+                                </div>
                             </div>
-                        </div>
-
-                        <div className="card-wrapper">
-                            <div className="card">
-                                <div className="icon-div"></div>
-                                <h2>Graphic Designer</h2>
-                                <a href="#"><p>Details</p></a>
+                        </a>
+                        
+                        <a href="./">
+                            <div className="card-wrapper artist-wrapper">
+                                <div className="card artist-card">
+                                    <div className="icon-div">{/* circle div dont delete */}</div>
+                                    <img src={graphicSvg} alt="graphic" className="artist-image" />
+                                    <h2 className="artist-title">Graphic Designer</h2>
+                                    <a href="#" className="artist-button"><p>View Details</p></a>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
