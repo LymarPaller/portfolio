@@ -18,7 +18,7 @@
         padding-top: 2rem;
         flex: 4;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
 
         @include tablet{
@@ -50,7 +50,7 @@
         }
     }
 
-    div{
+    .button-container{
         padding-top: 2rem;
         flex: 1;
         display: flex;
@@ -58,6 +58,9 @@
 
         @include tablet{
             flex: 3;
+            justify-content: end;
+            align-items: center;
+            padding-top: 0;
         }
         
         button {
@@ -66,6 +69,21 @@
             width: 8rem;
             background-color: var(--primary-color);
             color: white;
+        }
+    }
+
+    .toggler-nav{
+        display: none;
+
+        @include tablet{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+
+        svg{
+            height: 3rem;
         }
     }
 }
