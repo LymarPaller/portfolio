@@ -142,7 +142,7 @@ function Home () {
 
             </section>
 
-            {/* <section className="contacts-container">
+            <section className="contacts-container">
                 <div className="contacts-wrapper">
                     <h1>Contacts</h1>
                     <div className="contacts-card">
@@ -189,7 +189,7 @@ function Home () {
                     </div>
                 </div>
 
-            </section> */}
+            </section>
         </div>
         </>
     )

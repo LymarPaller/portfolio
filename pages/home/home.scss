@@ -115,23 +115,43 @@ section{
         .intro-wrapper{
             width: 50vw;
 
+            @include tablet{
+                width: 80vw;
+            }
+
+            @include mobile{
+                width: 90vw;
+            }
+
             h1{
                 font-family: var(--main-font);
                 font-weight: 500;
                 color: var(--white);
                 text-align: center;
                 margin-bottom: 4rem;
+
+                @include tablet{
+                    margin-bottom: 2rem;
+                }
             }
             p{
                 font-weight: 200;
                 line-height: 3rem;
                 text-align: center;
+
+                @include mobile{
+                    font-size: .8rem;
+                }
             }
         }
     }
 
     .highlights-container{
         height: 100vh;
+
+        @include mobile{
+            height: 200vh;
+        }
 
         .highlights-wrapper{
 
@@ -147,7 +167,21 @@ section{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                gap: 3rem;
+                gap: 2rem;
+
+                transition: 500ms;
+
+                @include smallScreen{
+                    gap: 3rem;
+                }
+
+                @include tablet{
+                    gap: 2rem;
+                }
+
+                @include mobile{
+                    flex-direction: column;
+                }
 
                 .card-wrapper{
                     width: 30vw;
@@ -155,6 +189,19 @@ section{
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
+                    @include smallScreen{
+                        width: 40vw;
+                    }
+
+                    @include tablet{
+                        width: 45vw;
+                    }
+
+                    @include mobile{
+                        width: 80vw;
+                        height: 28rem;
+                    }
 
                     .card{
                         perspective: 1000px;
@@ -170,6 +217,16 @@ section{
                         transform-style: preserve-3d;
                         position: relative;
                         box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5);
+
+                        
+                        @include tablet{
+                            width: 15rem;
+                        }
+
+                        @include tablet{
+                            width: 18rem;
+                            height: 23rem;
+                        }
                         
                         .icon-div{
                             position: absolute;
@@ -178,6 +235,16 @@ section{
                             height: 10rem;
                             background-color: red;
                             border-radius: 50%;
+
+                            @include tablet{
+                                top: 3rem;
+                                width: 8rem;
+                                height: 8rem;
+                            }
+
+                            @include mobile{
+                                top: 2.5rem;
+                            }
                         }
 
                         img{
@@ -191,6 +258,11 @@ section{
                             margin-top: 3rem;
                             text-align: center;
                             transition: 300ms;
+
+                            
+                            @include tablet{
+                                font-size: 1.3rem;
+                            }
                         }
 
                         p{
@@ -218,7 +290,6 @@ section{
         background-color: var(--container-bg-color);
 
         .contacts-wrapper{
-            width: 50vw;
             background-color: var(--container-bg-color);
 
             h1{
@@ -231,25 +302,40 @@ section{
 
             .contacts-card{
                 display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 80vw;
+                height: 60vh;
 
+                @include tablet{
+                    width: 60vw;
+                }
 
                 ul{
-                    flex: 1;
-                    height: 50vh;
                     display: flex;
                     justify-content: center;
                     align-items: start;
                     flex-direction: column;
                     flex-wrap: wrap;
+                    width: 35vw;
+
+                    @include mobile{
+                        align-items: center;
+                        width: 60vw;
+                    }
 
                     li{
-                        flex: 1;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        height: 8rem;
-                        margin-left: 4rem;
+                        height: 5rem;
+                        margin-left: 6rem;
                         margin-right: auto;
+
+                        @include tablet{
+                            height: 4rem;
+                            margin-left: 0;
+                        }
 
                         a{
                             display: flex;
