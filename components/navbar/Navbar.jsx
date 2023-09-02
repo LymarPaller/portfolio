@@ -1,6 +1,8 @@
 import { Link, NavLink } from "react-router-dom"
 import logo from "../../images/logoLemar.svg"
 import "./navbar.scss"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
 function Navbar () {
 
@@ -10,6 +12,9 @@ function Navbar () {
         <>
             <div className="navbar-container container-fluid">
                 <img src={logo} alt="lymar logo"/>
+                <div>
+                {/* <FontAwesomeIcon icon={faTimes} className="logout-xmark" /> */}
+                </div>
                 <nav>
                     <ul>
                         <li>
@@ -24,7 +29,7 @@ function Navbar () {
                     </ul>
                 </nav>
                 <div>
-                    <button>Download</button>
+                    <button>Download CV</button>
                 </div>
             </div>
         </>

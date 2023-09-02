@@ -26,10 +26,11 @@ function Home () {
         const artButton = document.querySelector(".artist-button");
         
         function handleMouseMove(e, card) {
-            let xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+            const cardRect = card.getBoundingClientRect();
+            const xAxis = (e.clientX - cardRect.left - cardRect.width / 2) / 20;
             let yAxis = (window.innerHeight / 2 - e.pageY) / 20;
-
-            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+            
+            card.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;
         }
         
         devWrapper.addEventListener("mousemove", (e) => {handleMouseMove(e, devCard);});
@@ -87,18 +88,6 @@ function Home () {
                         <p>I am a <span>Full-Stack Web Developer</span></p>
                         <p>and a <span>Graphic Designer</span></p>
                     </div>
-
-                    <div className="social-container">
-                        <a href="https://www.facebook.com/cantleavethisempty" target="blank">
-                            <FacebookSvg/>
-                        </a>
-                        <a href="https://www.instagram.com" target="blank">
-                            <InstagramSvg/>
-                        </a>
-                        <a href="https://www.linkedin.com" target="blank">
-                            <LinkedinSvg/>
-                        </a>
-                    </div>
                 </div>
                 
                 <div className="photo-container">
@@ -153,7 +142,7 @@ function Home () {
 
             </section>
 
-            <section className="contacts-container">
+            {/* <section className="contacts-container">
                 <div className="contacts-wrapper">
                     <h1>Contacts</h1>
                     <div className="contacts-card">
@@ -200,7 +189,7 @@ function Home () {
                     </div>
                 </div>
 
-            </section>
+            </section> */}
         </div>
         </>
     )

@@ -22,6 +22,16 @@
     --background-color-dark: #2D2D2D;
     --container-bg-color-dark: #232323;
 
+    //font
+
+    --font-size-sm: clamp(0.8rem, 0.18vw + 0.75rem, 0.89rem);
+    --font-size-base: clamp(1rem, 0.36vw + 0.9rem, 1.19rem);
+    --font-size-md: clamp(1.25rem, 0.64vw + 1.07rem, 1.58rem);
+    --font-size-lg: clamp(1.56rem, 1.06vw + 1.27rem, 2.11rem);
+    --font-size-xl: clamp(1.95rem, 1.66vw + 1.49rem, 2.81rem);
+    --font-size-xxl: clamp(2.44rem, 2.52vw + 1.73rem, 3.75rem);
+    --font-size-xxxl: clamp(3.05rem, 3.75vw + 2rem, 5rem);
+
     //neutral color
 
     --white: #fff;
@@ -58,4 +68,27 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+
+//media query
+
+
+@mixin smallScreen {
+    @media (max-width: 888px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 700px) {
+        @content;
+    }
+}
+
+
+@mixin mobile {
+    @media (max-width: 450px) {
+        @content;
+    }
 }

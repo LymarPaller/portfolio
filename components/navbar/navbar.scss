@@ -1,26 +1,29 @@
-@import url(../../src/main.scss);
+@import "../../src/main.scss";
 
 .navbar-container{
     width: 100%;
-    height: 5rem;
     display: flex;
     justify-content: start;
     align-items: center;
-    padding-inline: 3rem;
-    gap: 2rem;
     position: absolute;
+    padding-top: var(--font-size-sm);
 
     img{
-        height: 3rem;
+        height: 50px;
+        margin-top: 1rem;
         flex: 1;
     }
 
     nav{
         padding-top: 2rem;
-        flex: 3;
+        flex: 4;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include tablet{
+            display: none;
+        }
 
         ul{
             gap: 3rem;
@@ -31,11 +34,11 @@
             padding-left: 0;
             margin-bottom: 0;
 
-
             a {
                 color: var(--grey);
                 transition: 600ms;
                 text-align: center;
+                font-size: var(--font-size-base);
             }
 
             a:hover,
@@ -46,17 +49,21 @@
             }
         }
     }
+
     div{
         padding-top: 2rem;
-        flex: 3;
+        flex: 1;
         display: flex;
-        justify-content: end;
+        justify-content: center;
+
+        @include tablet{
+            flex: 3;
+        }
         
         button {
-            margin-right: 5rem;
             border-radius: .5rem;
             border: 0;
-            width: 6rem;
+            width: 8rem;
             background-color: var(--primary-color);
             color: white;
         }

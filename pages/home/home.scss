@@ -1,9 +1,7 @@
-@import url(../../src/main.scss);
-
-
-                
+@import "../../src/main.scss";
+           
 svg{
-    width: 1.25rem;
+    width: 20px;
     fill: var(--primary-color);
 }
 
@@ -22,29 +20,42 @@ section{
 
     .profile{
         height: 100vh;
+        overflow: hidden;
 
         .name-container{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-inline: 3rem;
+            
+            @include tablet{
+            flex: 1;
+            margin-left: 1.8rem;
+            }
+
+            @include mobile{
+                margin-left: 1.2rem;
+            }
 
             .intro{
-                font-size: 2rem;
+                font-size: var(--font-size-lg);
                 font-weight: 300;
             }
             h1{
                 font-family: var(--main-font);
                 color: var(--primary-color);
-                font-size: 4rem;
+                font-size: var(--font-size-xxl);
                 font-weight: var(--title-font-weight);
                 text-transform: uppercase;
             }
 
             .intro-container{
                 p{
-                    font-size: 1rem;
+                    font-size: var(--font-size-base);
                     text-transform: uppercase;
+
+                    @include mobile{
+                        font-size: .8rem;
+                    }
 
                     span{
                         font-weight: 600;
@@ -66,13 +77,31 @@ section{
             align-items: end;
             margin-inline: 3rem;
 
+            @include tablet{
+            flex: 1;
+            }
+
             div{
-                min-width: 30vw;
+                min-width: 35vw;
                 height: 90%;
                 background-image: url(../../images/profile-red.png);
                 background-position: top;
                 background-repeat: no-repeat;
                 background-size: cover;
+
+                @include smallScreen{
+                min-width: 45vw;
+                }
+
+                @include tablet{
+                min-width: 70vw;
+                height: 85%;
+                }
+
+                @include mobile{
+                min-width: 90vw;
+                height: 80%;
+                }
             }
         }
 
@@ -121,14 +150,14 @@ section{
                 gap: 3rem;
 
                 .card-wrapper{
-                    width: 25vw;
+                    width: 30vw;
                     height: 30rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    perspective: 1000px;
 
                     .card{
+                        perspective: 1000px;
                         width: 18rem;
                         height: 23rem;
                         display: flex;
