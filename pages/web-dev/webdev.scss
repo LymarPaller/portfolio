@@ -1,6 +1,20 @@
 @import "../../src/main.scss";
 
 .webdev-main-container{
+
+    h4{
+        text-transform: uppercase;
+        font-family: var(--main-font);
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    p{
+        font-weight: 300;
+        margin-bottom: 1rem;
+        font-size: var(--font-size-sm);
+    }
+
     .header-container{
         height: 90vh;
         display: flex;
@@ -101,7 +115,70 @@
     }
 
     .projects-container{
-        height: 100vh;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1{
+            margin-block: 5rem;
+        }
+
+        .projects-wrapper{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            gap: 10rem;
+
+            .kairos-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                gap: 4rem;
+
+                                
+                .project-details{
+                    align-items: end;
+
+                    p{
+                        text-align: end;
+                    }
+                }
+            }
+            .nexus-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row-reverse;
+                gap: 4rem;
+                margin-bottom: 10rem;
+            }
+        }
+    }
+}
+
+.project-details{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.project-card{
+    width: 35vw;
+    height: 40vh;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    overflow: hidden;
+
+    img{
+        height: 100%;
     }
 }
 

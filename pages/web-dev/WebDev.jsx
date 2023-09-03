@@ -10,6 +10,8 @@ import PhpSvg from "../../components/svg/techStackSvg/PhpSvg";
 import LaravelSvg from "../../components/svg/techStackSvg/LaravelSvg";
 import SqlSvg from "../../components/svg/techStackSvg/SqlSvg";
 import JavaScriptSvg from "../../components/svg/techStackSvg/JavaScriptSvg";
+import kairosImg from "../../images/kairos-sample.png";
+import nexusImg from "../../images/nexus-sample.png";
 
 function WebDev () {
     return (
@@ -73,6 +75,64 @@ function WebDev () {
 
                 <section className="projects-container">
                     <h1>Projects</h1>
+                    <div className="projects-wrapper">
+
+                        <div className="kairos-container">
+                            <div className="project-details">
+
+                                <h4>Name:</h4>
+                                <p>Kairos Weather App</p>
+
+                                <h4>Description:</h4>
+                                <p>
+                                    Kairos weather app displays
+                                    current weather and 7day
+                                    forecast on selected locations.
+                                    It also displays advance
+                                    weather details like windspeed,
+                                    temperature, humidity, sunrise
+                                    and sunset.
+                                </p>
+
+                                <h4>Link:</h4>
+                                <a href="https://kairos-weatherapp.vercel.app/">
+                                    <p>kairos-weatherapp.vercel.app/</p>
+                                </a>
+
+                            </div>
+
+                            <div className="project-card">
+                                <img src={kairosImg} alt="nexus sample image" />
+                            </div>
+                        </div>
+
+                        <div className="nexus-container">
+
+                            <div className="project-details">
+
+                                <h4>Name:</h4>
+                                <p>Nexus</p>
+
+                                <h4>Description:</h4>
+                                <p>
+                                    Nexus is a social platform where
+                                    you can register, login, follow friends
+                                    post status, like and comment
+                                </p>
+
+                                <h4>Link:</h4>
+                                <a href="https://nexus-three-ruddy.vercel.app/login">
+                                    <p>nexus-three-ruddy.vercel.app/login</p>
+                                </a>
+
+                            </div>
+
+                            <div className="project-card">
+                                <img src={nexusImg} alt="kairus sample image" />
+                            </div>
+                        </div>
+
+                    </div>
 
                 </section>
 

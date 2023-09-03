@@ -27,37 +27,46 @@
                 width: 60vw;
             }
 
-            ul{
-                flex: 1;
+            div{
+                flex: 1;    
                 display: flex;
                 justify-content: center;
-                align-items: baseline;
-                flex-direction: column;
+                align-items: center;
                 flex-wrap: wrap;
                 width: 35vw;
 
-                @include mobile{
-                    align-items: center;
-                    width: 60vw;
-                }
-
-                li{
+                ul{
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    height: 5rem;
+                    align-items: baseline;
+                    flex-direction: column;
 
-                    @include tablet{
-                        height: 4rem;
-                        margin-left: 0;
+                    @include mobile{
+                        align-items: center;
+                        width: 60vw;
                     }
 
-                    a{
+                    li{
                         display: flex;
-                        gap: 1rem;
+                        justify-content: center;
+                        align-items: center;
+                        height: 5rem;
+
+                        @include tablet{
+                            height: 4rem;
+                            margin-left: 0;
+                        }
+
+                        a{
+                            display: flex;
+                            gap: 1rem;
+                        }
                     }
                 }
+
             }
+
+            
         }
     }
 }
