@@ -39,9 +39,6 @@ function WebDev () {
                                     <CssSvg/>
                                 </div>
                                 <div className="tech-stack-circle">
-                                    <JsSvg/>
-                                </div>
-                                <div className="tech-stack-circle">
                                     <SassSvg/>
                                 </div>
                                 <div className="tech-stack-circle">
