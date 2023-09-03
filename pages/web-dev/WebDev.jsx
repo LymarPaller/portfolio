@@ -3,7 +3,6 @@ import "./webdev.scss";
 import webDevSvg from "../../images/iconHighlight1.svg";
 import HtmlSvg from "../../components/svg/techStackSvg/HtmlSvg";
 import CssSvg from "../../components/svg/techStackSvg/CssSvg";
-import JsSvg from "../../components/svg/techStackSvg/jsSvg";
 import SassSvg from "../../components/svg/techStackSvg/SassSvg";
 import BootstrapSvg from "../../components/svg/techStackSvg/BootstrapSvg";
 import ReactJsSvg from "../../components/svg/techStackSvg/ReactJsSvg";
