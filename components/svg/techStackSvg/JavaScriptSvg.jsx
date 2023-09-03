@@ -1,4 +1,4 @@
-function JsSvg () {
+function JavaScriptSvg () {
     return(
         <>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" fill="currentcolor">
@@ -8,4 +8,4 @@ function JsSvg () {
     )
 }
 
-export default JsSvg
+export default JavaScriptSvg

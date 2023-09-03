@@ -9,6 +9,7 @@ import ReactJsSvg from "../../components/svg/techStackSvg/ReactJsSvg";
 import PhpSvg from "../../components/svg/techStackSvg/PhpSvg";
 import LaravelSvg from "../../components/svg/techStackSvg/LaravelSvg";
 import SqlSvg from "../../components/svg/techStackSvg/SqlSvg";
+import JavaScriptSvg from "../../components/svg/techStackSvg/JavaScriptSvg";
 
 function WebDev () {
     return (
@@ -39,6 +40,9 @@ function WebDev () {
                                 </div>
                                 <div className="tech-stack-circle">
                                     <SassSvg/>
+                                </div>
+                                <div className="tech-stack-circle">
+                                    <JavaScriptSvg/>
                                 </div>
                                 <div className="tech-stack-circle">
                                     <BootstrapSvg/>
