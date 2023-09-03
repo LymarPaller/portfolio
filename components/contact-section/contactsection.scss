@@ -20,18 +20,18 @@
         .contacts-card{
             display: flex;
             justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
-            width: 80vw;
-            height: 60vh;
 
             @include tablet{
                 width: 60vw;
             }
 
             ul{
+                flex: 1;
                 display: flex;
                 justify-content: center;
-                align-items: start;
+                align-items: baseline;
                 flex-direction: column;
                 flex-wrap: wrap;
                 width: 35vw;
@@ -46,8 +46,6 @@
                     justify-content: center;
                     align-items: center;
                     height: 5rem;
-                    margin-left: 6rem;
-                    margin-right: auto;
 
                     @include tablet{
                         height: 4rem;
