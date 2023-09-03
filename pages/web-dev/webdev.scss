@@ -22,6 +22,10 @@
         align-items: center;
         gap: 3rem;
 
+        @include mobile{
+            gap: 1.5rem;
+        }
+
         .circle-container{
             width: 10rem;
             height: 10rem;
@@ -31,8 +35,17 @@
             justify-content: center;
             align-items: center;
 
+            @include mobile{
+                width: 8.5rem;
+                height: 8.5rem;
+            }
+
             img{
                 width: 6rem;
+
+                @include mobile{
+                    width: 5rem;
+                }
             }
         }
 
@@ -41,6 +54,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: start;
+
+            @include tablet{
+                width: 35vw;
+            }
 
             p{
                 font-weight: 300;
@@ -77,9 +94,16 @@
             justify-content: space-evenly;
             align-items: center;
             flex-direction: column;
-            width: 45vw;
+            width: 70vw;
             gap: 2rem;
             margin-bottom: 5rem;
+
+            @include smallScreen{
+                width: 90vw;
+            }
+            @include tablet{
+                width: 80vw;
+            }
 
             .front-end-container{
                 flex: 1;
@@ -88,6 +112,10 @@
                 align-items: center;
                 flex-direction: column;
                 margin-block: 3rem;
+
+                @include smallScreen{
+                    margin-block: 3rem;
+                }
             }
     
             .back-end-container{
@@ -139,12 +167,23 @@
                 flex-direction: row;
                 gap: 4rem;
 
-                                
+                @include tablet{
+                    flex-direction: column-reverse;
+                }
+           
                 .project-details{
                     align-items: end;
 
+                    @include tablet{
+                        align-items: start;
+                    }
+
                     p{
                         text-align: end;
+
+                        @include tablet{
+                            text-align: start;
+                        }
                     }
                 }
             }
@@ -155,6 +194,10 @@
                 flex-direction: row-reverse;
                 gap: 4rem;
                 margin-bottom: 10rem;
+
+                @include tablet{
+                    flex-direction: column-reverse;
+                }
             }
         }
     }
@@ -165,17 +208,37 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    @include tablet{
+        width: 70vw;
+    }
 }
 
 
 .project-card{
     width: 35vw;
-    height: 40vh;
+    height: 38vh;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: start;
     overflow: hidden;
+    box-shadow: 0 0 10px var(--black);
+
+    @include smallScreen{
+        width: 45vw;
+        height: 30vh;
+    }
+
+    @include tablet{
+        width: 80vw;
+        height: 40vh;
+    }
+    
+    @include mobile{
+        width: 90vw;
+        height: 40vh;
+    }
 
     img{
         height: 100%;
@@ -192,11 +255,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    @include tablet{
+        height: 4rem;
+        width: 4rem;
+        margin-inline: 2rem;
+        margin-block: 1.5rem;
+    }
 
     
 
     svg{
         fill: var(--white);
         width: 3rem;
+
+        @include smallScreen{
+            width: 2rem;
+        }
     }
 }

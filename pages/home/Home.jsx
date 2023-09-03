@@ -111,7 +111,7 @@ function Home () {
                 <div className="highlights-wrapper">
                     <h1>Portfolio Highlights</h1>
                     <div className="highlight-card">
-                        <Link to="./webdev">
+                        <Link to="/web-developer">
                             <div className="card-wrapper dev-wrapper">
                                 <div className="card dev-card">
                                     <div className="icon-div">{/* circle div dont delete */}</div>
@@ -122,7 +122,7 @@ function Home () {
                             </div>
                         </Link>
                         
-                        <Link to="./">
+                        <Link to="/web-developer">
                             <div className="card-wrapper artist-wrapper">
                                 <div className="card artist-card">
                                     <div className="icon-div">{/* circle div dont delete */}</div>
