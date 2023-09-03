@@ -1,7 +1,15 @@
 import ContactSection from "../../components/contact-section/ContactSection";
 import "./webdev.scss";
 import webDevSvg from "../../images/iconHighlight1.svg";
-import graphicSvg from "../../images/iconHighlight2.svg";
+import HtmlSvg from "../../components/svg/techStackSvg/HtmlSvg";
+import CssSvg from "../../components/svg/techStackSvg/CssSvg";
+import JsSvg from "../../components/svg/techStackSvg/jsSvg";
+import SassSvg from "../../components/svg/techStackSvg/SassSvg";
+import BootstrapSvg from "../../components/svg/techStackSvg/BootstrapSvg";
+import ReactJsSvg from "../../components/svg/techStackSvg/ReactJsSvg";
+import PhpSvg from "../../components/svg/techStackSvg/PhpSvg";
+import LaravelSvg from "../../components/svg/techStackSvg/LaravelSvg";
+import SqlSvg from "../../components/svg/techStackSvg/SqlSvg";
 
 function WebDev () {
     return (
@@ -24,21 +32,39 @@ function WebDev () {
                         <div className="front-end-container">
                             <h2>Front End</h2>
                             <div className="circle-wrapper">
-                                <div className="tech-stack-circle"></div>
-                                <div className="tech-stack-circle"></div>
-                                <div className="tech-stack-circle"></div>
-                                <div className="tech-stack-circle"></div>
-                                <div className="tech-stack-circle"></div>
-                                <div className="tech-stack-circle"></div>
+                                <div className="tech-stack-circle">
+                                    <HtmlSvg/>
+                                </div>
+                                <div className="tech-stack-circle">
+                                    <CssSvg/>
+                                </div>
+                                <div className="tech-stack-circle">
+                                    <JsSvg/>
+                                </div>
+                                <div className="tech-stack-circle">
+                                    <SassSvg/>
+                                </div>
+                                <div className="tech-stack-circle">
+                                    <BootstrapSvg/>
+                                </div>
+                                <div className="tech-stack-circle">
+                                    <ReactJsSvg/>
+                                </div>
                             </div>
                         </div>
 
                         <div className="back-end-container">
                             <h2>Back End</h2>
                             <div className="circle-wrapper">
-                                <div className="tech-stack-circle"></div>
-                                <div className="tech-stack-circle"></div>
-                                <div className="tech-stack-circle"></div>
+                                <div className="tech-stack-circle">
+                                    <PhpSvg/>
+                                </div>
+                                <div className="tech-stack-circle">
+                                    <LaravelSvg/>
+                                </div>
+                                <div className="tech-stack-circle">
+                                    <SqlSvg/>
+                                </div>
 
                             </div>
                         </div>

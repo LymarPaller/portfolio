@@ -21,6 +21,7 @@
                 width: 6rem;
             }
         }
+
         .header-wrapper{
             display: flex;
             flex-direction: column;
@@ -42,27 +43,29 @@
     }
 
     .tech-stacks-container{
-        height: 200vh;
+        min-height: 100vh;
         background-color: var(--container-bg-color);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-inline: 3rem;
         
         h1{
-            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-block: 5rem;
         }
 
         .tech-stacks-wrapper{
-            flex: 4;
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
             flex-direction: column;
+            width: 45vw;
             gap: 2rem;
+            margin-bottom: 5rem;
 
             .front-end-container{
                 flex: 1;
@@ -70,18 +73,7 @@
                 justify-content: start;
                 align-items: center;
                 flex-direction: column;
-
-                h2{
-                    margin-bottom: 4rem;
-                }
-
-                .circle-wrapper{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    width: 60vw;
-                }
+                margin-block: 3rem;
             }
     
             .back-end-container{
@@ -90,19 +82,20 @@
                 justify-content: start;
                 align-items: center;
                 flex-direction: column;
-
-                h2{
-                    margin-bottom: 4rem;
-                }
-
-                .circle-wrapper{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    width: 60vw;
-                }
+                margin-block: 3rem;
             }
+
+            h2{
+                margin-bottom: 2rem;
+            }
+
+            .circle-wrapper{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
         }
 
     }
@@ -115,8 +108,18 @@
 .tech-stack-circle{
     height: 6rem;
     width: 6rem;
-    margin-inline: 5rem;
-    margin-block: 2rem;
+    margin-inline: 4rem;
+    margin-block: 3rem;
     background-color: var(--primary-color);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+
+    svg{
+        fill: var(--white);
+        width: 3rem;
+    }
 }
