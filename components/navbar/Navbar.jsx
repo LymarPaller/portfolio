@@ -1,8 +1,8 @@
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import logo from "../../images/logoLemar.svg"
 import "./navbar.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faHamburger, faTimes } from "@fortawesome/free-solid-svg-icons"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 function Navbar () {
 
@@ -18,7 +18,7 @@ function Navbar () {
                             <NavLink to="/">Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/webdev">Web Dev</NavLink>
+                            <NavLink to="/web-developer">Web Dev</NavLink>
                         </li>
                         <li>
                             <NavLink to="/graphic">Graphic Design</NavLink>

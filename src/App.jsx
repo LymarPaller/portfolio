@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Router, Routes } from "react-router-dom"
 import Home from "../pages/home/Home"
 import Maintenance from "../pages/maintenance/Maintenance"
 import Navbar from "../components/navbar/Navbar"
+import WebDev from "../pages/web-dev/WebDev"
 
 
 function App() {
@@ -15,10 +16,10 @@ function App() {
             <Home/>
           </>
         }/>
-        <Route path="/webdev" element={
+        <Route path="/web-developer" element={
           <>
             <Navbar/>
-            <Maintenance/>
+            <WebDev/>
           </>
         }/>
         <Route path="/*" element={

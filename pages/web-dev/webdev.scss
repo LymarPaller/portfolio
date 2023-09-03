@@ -1,0 +1,122 @@
+@import "../../src/main.scss";
+
+.webdev-main-container{
+    .header-container{
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        .circle-container{
+            width: 10rem;
+            height: 10rem;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 6rem;
+            }
+        }
+        .header-wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+
+            p{
+                font-weight: 300;
+                font-size: var(--font-size-lg);
+                height: max-content;
+            }
+
+            h1{
+                font-size: var(--font-size-xxl);
+                font-family: var(--main-font);
+                font-weight: 700;
+            }
+        }
+    }
+
+    .tech-stacks-container{
+        height: 200vh;
+        background-color: var(--container-bg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        h1{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tech-stacks-wrapper{
+            flex: 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+
+            .front-end-container{
+                flex: 1;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                flex-direction: column;
+
+                h2{
+                    margin-bottom: 4rem;
+                }
+
+                .circle-wrapper{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    width: 60vw;
+                }
+            }
+    
+            .back-end-container{
+                flex: 1;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                flex-direction: column;
+
+                h2{
+                    margin-bottom: 4rem;
+                }
+
+                .circle-wrapper{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    width: 60vw;
+                }
+            }
+        }
+
+    }
+
+    .projects-container{
+        height: 100vh;
+    }
+}
+
+.tech-stack-circle{
+    height: 6rem;
+    width: 6rem;
+    margin-inline: 5rem;
+    margin-block: 2rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}

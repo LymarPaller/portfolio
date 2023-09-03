@@ -1,15 +1,10 @@
 import "./home.scss"
-import FacebookSvg from "../../components/svg/FacebookSvg"
-import InstagramSvg from "../../components/svg/InstagramSvg"
-import LinkedinSvg from "../../components/svg/LinkedinSvg"
-import PhoneSvg from "../../components/svg/PhoneSvg"
-import EmailSvg from "../../components/svg/EmailSvg"
-import TwitterSvg from "../../components/svg/TwitterSvg"
 import Navbar from "../../components/navbar/Navbar"
 import webDevSvg from "../../images/iconHighlight1.svg"
 import graphicSvg from "../../images/iconHighlight2.svg"
 import { useEffect } from "react"
 import { Link } from "react-router-dom"
+import ContactSection from "../../components/contact-section/ContactSection"
 
 function Home () {
 
@@ -139,57 +134,9 @@ function Home () {
                         </Link>
                     </div>
                 </div>
-
             </section>
 
-            <section className="contacts-container">
-                <div className="contacts-wrapper">
-                    <h1>Contacts</h1>
-                    <div className="contacts-card">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <PhoneSvg/>
-                                    <p>09271444046</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <EmailSvg/>
-                                    <p>lymar.paller101@gmail.com</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <LinkedinSvg/>
-                                    <p>@placeholder</p>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <FacebookSvg/>
-                                    <p>@placeholder</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <InstagramSvg/>
-                                    <p>@placeholder</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <TwitterSvg/>
-                                    <p>@placeholder</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </section>
+            <ContactSection/>
         </div>
         </>
     )
