@@ -5,6 +5,8 @@ import graphicSvg from "../../images/iconHighlight2.svg"
 import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import ContactSection from "../../components/contact-section/ContactSection"
+import ProgressBar from "../../components/progress-bar/ProgressBar"
+import { motion } from "framer-motion"
 
 function Home () {
 
@@ -77,7 +79,9 @@ function Home () {
             <section className="profile">
                 <div className="name-container">
                     <p className="intro">Hello, I'm</p>
-                    <h1>Lymar Paller</h1>
+                    <motion.h1 animate={{ color: '#fff', x: 100}}>
+                        Lymar Paller
+                    </motion.h1>
 
                     <div className="intro-container">
                         <p>I am a <span>Full-Stack Web Developer</span></p>
