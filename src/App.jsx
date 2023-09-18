@@ -3,6 +3,7 @@ import Home from "../pages/home/Home"
 import Maintenance from "../pages/maintenance/Maintenance"
 import Navbar from "../components/navbar/Navbar"
 import WebDev from "../pages/web-dev/WebDev"
+import ContactSection from "../components/contact-section/ContactSection"
 
 
 function App() {
@@ -13,7 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={
           <>
+            <Navbar/>
             <Home/>
+            <ContactSection/>
           </>
         }/>
         <Route path="/web-developer" element={

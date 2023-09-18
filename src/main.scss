@@ -6,8 +6,8 @@
     padding: 0;
 
     //global variables
-    --main-font: 'Roboto Condensed';
-    --secondary-font: 'Roboto';
+    --main-font: 'Roboto Condensed', 'sans serif';
+    --secondary-font: 'Roboto', 'sans serif';
     
     --title-font-weight: 700;
     --nav-font-weight: 400;
@@ -78,6 +78,11 @@ a {
 
 //media query
 
+@mixin tabletMedium {
+    @media (min-width: 550px) {
+        @content;
+    }
+}
 
 @mixin smallScreen {
     @media (max-width: 888px) {

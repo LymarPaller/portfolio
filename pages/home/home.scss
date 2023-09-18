@@ -1,286 +1,178 @@
 @import "../../src/main.scss";
+
+h1{
+    font-family: var(--primary-font);
+}
+
+p{
+    font-family: var(--secondary-font);
+}
            
-svg{
-    width: 20px;
-    fill: var(--primary-color);
-}
-
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .home-container{
-    height: 100vh;
-    overflow-y: scroll;
-    position: relative;
-
-    .navbar-container{
-        position: absolute;
-    }
 
     .profile{
         height: 100vh;
-        overflow: hidden;
+        padding-top: 8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        
+        @include tabletMedium{
+            justify-content: center;
+            flex-direction: row;
+        }
 
         .name-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            
-            @include tablet{
-            flex: 1;
-            margin-left: 1.8rem;
+            width: 18rem;
+            height: max-content;
+
+            @include tabletMedium{
+                display: flex;
+                width: auto;
+                flex-direction: column;
+                height: 100%;
+                padding-left: 3rem;
+                margin-top: 5rem;
             }
 
-            @include mobile{
-                margin-left: 1.2rem;
-            }
-
-            .intro{
+            p{
                 font-size: var(--font-size-lg);
+                font-family: var(--secondary-font);
                 font-weight: 300;
             }
+
             h1{
-                font-family: var(--main-font);
-                color: var(--primary-color);
-                font-size: var(--font-size-xxl);
-                font-weight: var(--title-font-weight);
+                font-size: var(--font-size-xl);
+                font-family: var(--primary-font);
                 text-transform: uppercase;
+                color: var(--primary-color);
             }
 
+
             .intro-container{
+
                 p{
                     font-size: var(--font-size-base);
                     text-transform: uppercase;
-
-                    @include mobile{
-                        font-size: .8rem;
-                    }
-
-                    span{
-                        font-weight: 600;
-                    }
+                }
+                span{
+                    font-weight: 600;
                 }
             }
-            .social-container{
-                display: flex;
-                margin-top: 2rem;
-                gap: 2rem;
-            }
+
         }
 
         .photo-container{
-            height: 100%;
-            min-width: 30vw;
             display: flex;
             justify-content: center;
-            align-items: end;
-            margin-inline: 3rem;
-
-            @include tablet{
-            flex: 1;
+            align-items: center;
+            flex-wrap: wrap;
+            
+            @include tabletMedium{
+                height: 100%;
+                width: auto;
+                align-items: end;
             }
 
-            div{
-                min-width: 35vw;
-                height: 90%;
-                background-image: url(../../images/profile-red.png);
-                background-position: top;
-                background-repeat: no-repeat;
-                background-size: cover;
+            .profile-photo{
+                height: 60vh;
 
-                @include smallScreen{
-                min-width: 45vw;
-                }
-
-                @include tablet{
-                min-width: 70vw;
-                height: 85%;
-                }
-
-                @include mobile{
-                min-width: 90vw;
-                height: 80%;
+                @include tabletMedium{
+                    height: 100%;
                 }
             }
         }
-
     }
 
     .introduction-container{
-        width: 100%;
         height: 100vh;
         background-color: var(--container-bg-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .intro-wrapper{
-            width: 50vw;
-
-            @include tablet{
-                width: 80vw;
-            }
-
-            @include mobile{
-                width: 90vw;
-            }
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 70vw;
 
             h1{
-                font-family: var(--main-font);
-                font-weight: 500;
-                color: var(--white);
                 text-align: center;
-                margin-bottom: 4rem;
-
-                @include tablet{
-                    margin-bottom: 2rem;
-                }
+                color: var(--primary-color);
+                margin-bottom: 3rem;
             }
-            p{
-                font-weight: 200;
-                line-height: 3rem;
-                text-align: center;
 
-                @include mobile{
-                    font-size: .8rem;
-                }
+            p{
+                text-align: center;
+                line-height: 1.5rem;
             }
         }
     }
 
     .highlights-container{
-        height: 100vh;
+        height: 175vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-        @include mobile{
-            height: 200vh;
+        @include tabletMedium{
+            height: 100vh;
         }
 
         .highlights-wrapper{
+            height: max-content;
 
             h1{
-                font-family: var(--main-font);
-                font-weight: 500;
-                color: var(--white);
                 text-align: center;
-                margin-bottom: 4rem;
+                color: var(--primary-color);
+                margin-bottom: 3rem;
             }
 
             .highlight-card{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                gap: 2rem;
-
-                transition: 500ms;
-
-                @include smallScreen{
-                    gap: 3rem;
+                flex-direction: column;
+                gap: 4rem;
+                
+                @include tabletMedium{
+                    flex-direction: row;
+                    gap: 10rem;
                 }
 
-                @include tablet{
-                    gap: 2rem;
-                }
-
-                @include mobile{
-                    flex-direction: column;
-                }
-
-                .card-wrapper{
-                    width: 30vw;
-                    height: 30rem;
+                .card{
+                    height: 22rem;
+                    width: 16rem;
+                    border-radius: 20px;
+                    background-color: var(--container-bg-color);
                     display: flex;
-                    justify-content: center;
+                    justify-content: space-evenly;
                     align-items: center;
+                    flex-direction: column;
+                    box-shadow: 0px 5px 20px 0.5px black;
 
-                    @include smallScreen{
-                        width: 40vw;
-                    }
-
-                    @include tablet{
-                        width: 45vw;
-                    }
-
-                    @include mobile{
-                        width: 80vw;
-                        height: 28rem;
-                    }
-
-                    .card{
-                        perspective: 1000px;
-                        width: 18rem;
-                        height: 23rem;
+                    .circle-card{
+                        width: 6rem;
+                        aspect-ratio: 1 / 1;
+                        border-radius: 50%;
+                        background-color: var(--primary-color);
                         display: flex;
-                        justify-content: space-around;
+                        justify-content: center;
                         align-items: center;
-                        flex-direction: column;
-                        background-color: var(--container-bg-color);
-                        transition: 300ms;
-                        border-radius: 2rem;
-                        transform-style: preserve-3d;
-                        position: relative;
-                        box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5);
-
                         
-                        @include tablet{
-                            width: 15rem;
-                        }
-
-                        @include tablet{
-                            width: 18rem;
-                            height: 23rem;
-                        }
-                        
-                        .icon-div{
-                            position: absolute;
-                            top: 2rem;
-                            width: 10rem;
-                            height: 10rem;
-                            background-color: red;
-                            border-radius: 50%;
-
-                            @include tablet{
-                                top: 3rem;
-                                width: 8rem;
-                                height: 8rem;
-                            }
-
-                            @include mobile{
-                                top: 2.5rem;
-                            }
-                        }
-
                         img{
-                            margin-top: 4rem;
-                            width: 5rem;
-                            z-index: 1;
-                            transition: 300ms;
-                        }
-
-                        h2{
-                            margin-top: 3rem;
-                            text-align: center;
-                            transition: 300ms;
-
-                            
-                            @include tablet{
-                                font-size: 1.3rem;
-                            }
-                        }
-
-                        p{
-                            color: var(--primary-color);
-                            margin-block: 1rem;
-                            transition: 300ms;
-                        }
-
-                        a{
-                            transition: 300ms;
+                            height: 3rem;
                         }
                     }
 
-                    // .card:hover{
-                    //     box-shadow: 0px 0px 50px rgb(172, 172, 172);
-                    // }
+                    h2{
+                        font-size: var(--font-size-md);
+                        width: 11rem;
+                        text-align: center;
+                    }
                 }
             }
         }

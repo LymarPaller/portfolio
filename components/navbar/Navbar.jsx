@@ -1,19 +1,24 @@
 import { NavLink } from "react-router-dom"
-import logo from "../../images/logoLemar.svg"
 import "./navbar.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
+import LymarLogo from "../svg/LymarLogo"
+import { useState } from "react"
 
 function Navbar () {
 
+    const [showNavbar, setShowNavbar] = useState(false);
 
+    const toggleNavbar = () => {
+        setShowNavbar(!showNavbar)
+    }
 
     return (
         <>
-            <div className="navbar-container container-fluid">
-                <img src={logo} alt="lymar logo"/>
-                <nav>
-                    <ul>
+            <div className="navbar-container">
+                <LymarLogo/>
+                <nav className={`hidden-navbar ${showNavbar ? 'show-navbar' : ''}`}>
+                    <ul className="navbar-wrapper">
                         <li>
                             <NavLink to="/">Home</NavLink>
                         </li>
@@ -23,13 +28,13 @@ function Navbar () {
                         <li>
                             <NavLink to="/graphic">Graphic Design</NavLink>
                         </li>
+                        <div className="button-container">
+                            <button>Download CV</button>
+                        </div>
                     </ul>
                 </nav>
-                <div className="button-container">
-                    <button>Download CV</button>
-                </div>
-                <div className="toggler-nav">
-                    <FontAwesomeIcon icon={faBars} className="logout-xmark" />
+                <div className="toggler-nav" onClick={toggleNavbar}>
+                    <FontAwesomeIcon icon={faBars} className="toggler" />
                 </div>
             </div>
         </>

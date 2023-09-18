@@ -1,88 +1,104 @@
 @import "../../src/main.scss";
 
 .navbar-container{
-    width: 100%;
     display: flex;
-    justify-content: start;
-    align-items: center;
-    padding-top: var(--font-size-sm);
+    justify-content: space-between;
+    height: 5rem;
+    padding-inline: 1rem;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: var(--container-bg-color);
 
-    img{
-        height: 50px;
-        margin-top: 1rem;
-        flex: 1;
+
+    svg{
+        width: 3rem;
     }
 
-    nav{
-        padding-top: 2rem;
-        flex: 4;
+    .hidden-navbar{
+        display: none;
+
+        @include tabletMedium {
+            display: flex;
+        }
+    }
+
+    .show-navbar{
         display: flex;
-        justify-content: start;
+        position: relative;
+    }
+    
+    .toggler-nav{
+        display: flex;
+        justify-content: center;
         align-items: center;
 
-        @include tablet{
+        @include tabletMedium {
             display: none;
         }
 
-        ul{
-            gap: 3rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            padding-left: 0;
-            margin-bottom: 0;
-
-            a {
-                color: var(--grey);
-                transition: 600ms;
-                text-align: center;
-                font-size: var(--font-size-base);
-            }
-
-            a:hover,
-            a:active,
-            a:focus{
-                color: var(--white);
-                font-weight: 500;
-            }
+        svg{
+            height: 2rem;
         }
     }
+}
 
-    .button-container{
-        padding-top: 2rem;
-        flex: 1;
+nav{
+
+    @include tabletMedium {
+        display: flex;
         display: flex;
         justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+}
 
-        @include tablet{
-            flex: 3;
-            justify-content: end;
-            align-items: center;
-            padding-top: 0;
-        }
-        
-        button {
-            border-radius: .5rem;
-            border: 0;
-            width: 8rem;
-            background-color: var(--primary-color);
-            color: white;
-        }
+.navbar-wrapper{
+    background-color: var(--container-bg-color);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100vw;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @include tabletMedium {
+        background-color: transparent;
+        position: static;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: var(--font-size-sm);
     }
 
-    .toggler-nav{
-        display: none;
+    li{
 
-        @include tablet{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex: 1;
+        a{
+            color: white;
+            font-size: var(--font-size-sm);
         }
+    }
+    .button-container{
 
-        svg{
-            height: 3rem;
+        
+        @include tabletMedium {
+        }
+        button{
+            background-color: var(--primary-color);
+            border: 0;
+            width: 8rem;
+            height: 2rem;
+            border-radius: 10px;
         }
     }
 }
