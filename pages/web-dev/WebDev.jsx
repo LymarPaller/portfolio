@@ -31,7 +31,7 @@ function WebDev () {
                     <h1>Tech Stacks</h1>
 
                     <div className="tech-stacks-wrapper">
-                        <div className="front-end-container">
+                        <div className="front-end-container circle-container">
                             <h2>Front End</h2>
                             <div className="circle-wrapper">
                                 <div className="tech-stack-circle">
@@ -55,7 +55,7 @@ function WebDev () {
                             </div>
                         </div>
 
-                        <div className="back-end-container">
+                        <div className="back-end-container circle-container">
                             <h2>Back End</h2>
                             <div className="circle-wrapper">
                                 <div className="tech-stack-circle">
@@ -77,7 +77,12 @@ function WebDev () {
                     <h1>Projects</h1>
                     <div className="projects-wrapper">
 
-                        <div className="kairos-container">
+                        <div className="kairos-container project-single-container">
+                            
+                            <div className="project-card">
+                                <img src={kairosImg} alt="nexus sample image" />
+                            </div>
+
                             <div className="project-details">
 
                                 <h4>Name:</h4>
@@ -100,13 +105,13 @@ function WebDev () {
                                 </a>
 
                             </div>
-
-                            <div className="project-card">
-                                <img src={kairosImg} alt="nexus sample image" />
-                            </div>
                         </div>
 
-                        <div className="nexus-container">
+                        <div className="nexus-container project-single-container">
+
+                            <div className="project-card">
+                                <img src={nexusImg} alt="kairus sample image" />
+                            </div>
 
                             <div className="project-details">
 
@@ -126,17 +131,11 @@ function WebDev () {
                                 </a>
 
                             </div>
-
-                            <div className="project-card">
-                                <img src={nexusImg} alt="kairus sample image" />
-                            </div>
                         </div>
 
                     </div>
 
                 </section>
-
-                <ContactSection/>
             </div>
         </>
     )

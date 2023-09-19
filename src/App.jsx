@@ -23,6 +23,7 @@ function App() {
           <>
             <Navbar/>
             <WebDev/>
+            <ContactSection/>
           </>
         }/>
         <Route path="/*" element={

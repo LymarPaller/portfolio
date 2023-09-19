@@ -2,50 +2,29 @@
 
 .webdev-main-container{
 
-    h4{
-        text-transform: uppercase;
-        font-family: var(--main-font);
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-    }
-
-    p{
-        font-weight: 300;
-        margin-bottom: 1rem;
-        font-size: var(--font-size-sm);
-    }
-
     .header-container{
-        height: 90vh;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         gap: 3rem;
 
-        @include mobile{
-            gap: 1.5rem;
+        @include tabletMedium{
+            flex-direction: row;
         }
 
         .circle-container{
-            width: 10rem;
-            height: 10rem;
-            background-color: var(--primary-color);
+            width: 7rem;
+            aspect-ratio: 1 / 1;
             border-radius: 50%;
+            background-color: var(--primary-color);
             display: flex;
             justify-content: center;
             align-items: center;
 
-            @include mobile{
-                width: 8.5rem;
-                height: 8.5rem;
-            }
-
             img{
-                width: 6rem;
-
-                @include mobile{
-                    width: 5rem;
-                }
+                width: 70%;
             }
         }
 
@@ -53,224 +32,176 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: start;
-
-            @include tablet{
-                width: 35vw;
-            }
-
-            p{
-                font-weight: 300;
-                font-size: var(--font-size-lg);
-                height: max-content;
-            }
-
-            h1{
-                font-size: var(--font-size-xxl);
-                font-family: var(--main-font);
-                font-weight: 700;
-            }
+            align-items: center;
         }
     }
 
     .tech-stacks-container{
-        min-height: 100vh;
+        height: 100vh;
         background-color: var(--container-bg-color);
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-inline: 3rem;
-        
+        flex-direction: column;
+
         h1{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-block: 5rem;
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 5rem;
         }
 
         .tech-stacks-wrapper{
             display: flex;
-            justify-content: space-evenly;
-            align-items: center;
             flex-direction: column;
-            width: 70vw;
-            gap: 2rem;
-            margin-bottom: 5rem;
-
-            @include smallScreen{
-                width: 90vw;
-            }
-            @include tablet{
-                width: 80vw;
-            }
-
-            .front-end-container{
-                flex: 1;
-                display: flex;
-                justify-content: start;
-                align-items: center;
-                flex-direction: column;
-                margin-block: 3rem;
-
-                @include smallScreen{
-                    margin-block: 3rem;
-                }
-            }
-    
-            .back-end-container{
-                flex: 1;
-                display: flex;
-                justify-content: start;
-                align-items: center;
-                flex-direction: column;
-                margin-block: 3rem;
-            }
-
-            h2{
-                margin-bottom: 2rem;
-            }
-
-            .circle-wrapper{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
-            }
-
-        }
-
-    }
-
-    .projects-container{
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        h1{
-            margin-block: 5rem;
-        }
-
-        .projects-wrapper{
-            display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
-            flex-direction: column;
-            gap: 10rem;
+            gap: 5rem;
 
-            .kairos-container{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            @include tabletMedium{
                 flex-direction: row;
-                gap: 4rem;
-
-                @include tablet{
-                    flex-direction: column-reverse;
-                }
-           
-                .project-details{
-                    align-items: end;
-
-                    @include tablet{
-                        align-items: start;
-                    }
-
-                    p{
-                        text-align: end;
-
-                        @include tablet{
-                            text-align: start;
-                        }
-                    }
-                }
+                align-items: start;
             }
-            .nexus-container{
+
+            .circle-container{
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                flex-direction: row-reverse;
-                gap: 4rem;
-                margin-bottom: 10rem;
 
-                @include tablet{
-                    flex-direction: column-reverse;
+                h2{
+                    margin-bottom: 3rem;
+                    font-size: var(--font-size-lg);
                 }
             }
         }
     }
 }
 
-.project-details{
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-    @include tablet{
-        width: 70vw;
-    }
-}
-
-
-.project-card{
-    width: 35vw;
-    height: 38vh;
-    border-radius: 1rem;
+.circle-wrapper{
     display: flex;
     justify-content: center;
-    align-items: start;
-    overflow: hidden;
-    box-shadow: 0 0 10px var(--black);
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    gap: 2rem; 
 
-    @include smallScreen{
-        width: 45vw;
-        height: 30vh;
-    }
-
-    @include tablet{
-        width: 80vw;
-        height: 40vh;
-    }
-    
-    @include mobile{
-        width: 90vw;
-        height: 40vh;
-    }
-
-    img{
-        height: 100%;
+    @include tabletMedium{
+        flex-direction: row;
+        width: 30vw;
+        gap: 3rem; 
     }
 }
 
 .tech-stack-circle{
-    height: 6rem;
-    width: 6rem;
-    margin-inline: 4rem;
-    margin-block: 3rem;
     background-color: var(--primary-color);
+    width: var(--font-size-xxl);
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    @include tablet{
-        height: 4rem;
-        width: 4rem;
-        margin-inline: 2rem;
-        margin-block: 1.5rem;
-    }
-
-    
 
     svg{
+        width: var(--font-size-md);
         fill: var(--white);
-        width: 3rem;
+    }
+}
 
-        @include smallScreen{
-            width: 2rem;
+.projects-container{
+    height: 175vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include tabletMedium{
+        height: 100vh;
+    }
+
+    h1{
+        text-align: center;
+        color: var(--primary-color);
+        margin-bottom: 3rem;
+
+        @include tabletMedium{
+        margin-bottom: 5rem;
+        }
+    
+    }
+
+    .projects-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+
+        @include tabletMedium{
+            flex-direction: row;
+            align-items: start;
+            gap: 9vw;
+        }
+
+        .project-single-container{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            .project-card{
+                width: 18rem;
+                height: 25vh;
+                background-color: var(--container-bg-color);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0px 5px 20px 0.5px black;
+
+                @include tabletMedium{
+                    width: 40vw;
+                    max-width: 25rem;
+                    height: 30vh;
+                }
+
+                img{
+                    height: 100%;
+                }
+            }
+
+            .project-details{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: .5rem;
+                width: 18rem;
+
+                @include tabletMedium{
+                    width: 35vw;
+                    max-width: 25rem;
+                    gap: .3rem;
+                }
+
+                h4{
+                    font-size: var(--font-size-base);
+
+                    @include tabletMedium{
+                        font-size: var(--font-size-sm);
+                    }
+                }
+
+                p{
+                    font-size: var(--font-size-base);
+                    
+                    @include tabletMedium{
+                        font-size: var(--font-size-sm);
+                    }
+                }
+            }
         }
     }
 }
