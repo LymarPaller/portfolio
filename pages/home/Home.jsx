@@ -4,6 +4,7 @@ import graphicSvg from "../../images/iconHighlight2.svg"
 import { Link } from "react-router-dom"
 import ContactSection from "../../components/contact-section/ContactSection"
 import profileRed from "../../images/profile-red.png"
+import AnimatePage from "../../src/AnimatePage"
 
 function Home () {
 
