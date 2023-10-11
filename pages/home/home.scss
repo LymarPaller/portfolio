@@ -1,5 +1,9 @@
 @import "../../src/main.scss";
 
+#main-logo{
+    fill: var(--primary-color);
+}
+
 h1{
     font-family: var(--primary-font);
 }

@@ -20,7 +20,7 @@ function Navbar () {
                 <nav className={`hidden-navbar ${showNavbar ? 'show-navbar' : ''}`}>
                     <ul className="navbar-wrapper">
                         <li>
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink to="/home">Home</NavLink>
                         </li>
                         <li>
                             <NavLink to="/web-developer">Web Dev</NavLink>

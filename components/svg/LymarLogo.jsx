@@ -1,12 +1,31 @@
-function LymarLogo () {
+import { motion } from "framer-motion"
+
+function LymarLogo ({variants, initial, animate, pathVariant, pathInitial, pathAnimate }) {
+
     return (
         <>
-        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 253 253" fill="currentcolor">
+        <motion.svg
+            variants={variants}
+            initial={initial}
+            animate={animate}
+            id="main-logo"
+            data-name="Layer 2"
+            viewBox="0 0 256 259"
+            fill="currentcolor"
+        >
             <g id="Layer_1-2" data-name="Layer 1">
-                <path className="cls-1" d="m246,119.42c4.41-6.03,7-13.43,7-21.42v-62.11c0-19.82-16.07-35.89-35.89-35.89H58v48h40v147h48v-44.5h59v102.5h48v-98c0-7.99-2.59-15.39-7-21.42-1.12-1.55-2.37-3.01-3.72-4.36-.96-.96-1.98-1.88-3.05-2.72,1.07-.84,2.09-1.76,3.05-2.72,1.35-1.35,2.6-2.81,3.72-4.36Zm-41-16.92h-59v-54.5h39.61c10.71,0,19.39,8.68,19.39,19.39v35.11Z"/>
-                <path className="cls-1" d="m67.39,205c-10.71,0-19.39-8.68-19.39-19.39V0H0v217.11c0,19.82,16.07,35.89,35.89,35.89h110.11v-48h-78.61Zm-29.39-72h-.01c.01-.17.01-.33.01-.5v.5Z"/>
+                    <motion.path
+                        variants={pathVariant}
+                        initial={pathInitial}
+                        animate={pathAnimate}
+                    className="cls-1" d="m208,253v-102.5h-65v44.5h-42V48h-40V6h156.11c18.14,0,32.89,14.75,32.89,32.89v62.11c0,7.11-2.22,13.9-6.42,19.65-1.02,1.41-2.17,2.76-3.42,4.01-.92.92-1.85,1.75-2.78,2.48l-3,2.36,3,2.36c.93.73,1.86,1.56,2.78,2.48,1.25,1.25,2.4,2.6,3.41,4,4.21,5.76,6.43,12.55,6.43,19.66v95h-42Zm-65-144.5h65v-38.11c0-12.35-10.04-22.39-22.39-22.39h-42.61v60.5Z"/>
+                    <motion.path
+                        variants={pathVariant}
+                        initial={pathInitial}
+                        animate={pathAnimate}
+                    className="cls-1" d="m35.89,253c-18.14,0-32.89-14.75-32.89-32.89V6h42v182.61c0,12.35,10.04,22.39,22.39,22.39h75.61v42H35.89Z"/>
             </g>
-        </svg>
+        </motion.svg>
         </>
     )
 }

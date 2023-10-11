@@ -4,6 +4,7 @@ import Maintenance from "../pages/maintenance/Maintenance"
 import Navbar from "../components/navbar/Navbar"
 import WebDev from "../pages/web-dev/WebDev"
 import ContactSection from "../components/contact-section/ContactSection"
+import LandingPage from "../pages/landingPage/LandingPage"
 
 
 function App() {
@@ -13,6 +14,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={
+          <>
+            <LandingPage/>
+          </>
+        }/>
+        <Route path="/home" element={
           <>
             <Navbar/>
             <Home/>
