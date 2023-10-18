@@ -89,7 +89,7 @@ function LandingPage () {
                     pathAnimate={svgPathVariant.visible}
                 />
                 <motion.a
-                href="/home"
+                to="/home"
                 className="enter-button"
                 initial={{y: -900, opacity: 0}}
                 animate={{y: 0, opacity: 1}}
