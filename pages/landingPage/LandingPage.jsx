@@ -88,23 +88,27 @@ function LandingPage () {
                     pathInitial={svgPathVariant.hidden}
                     pathAnimate={svgPathVariant.visible}
                 />
-                <motion.a
+                <Link
                 to="/home"
-                className="enter-button"
-                initial={{y: -900, opacity: 0}}
-                animate={{y: 0, opacity: 1}}
-                transition={{
-                    delay: 5.5,
-                    duration: 1,
-                    y: {
-                        type: "spring",
-                        damping: 10,
-                    }
-                }}
                 >
+                    <motion.div
+                    className="enter-button"
+                    initial={{y: -900, opacity: 0}}
+                    animate={{y: 0, opacity: 1}}
+                    transition={{
+                        delay: 5.5,
+                        duration: 1,
+                        y: {
+                            type: "spring",
+                            damping: 10,
+                        }
+                    }}>
+                        
                     <p>Check Portfolio</p>
                     <EnterSvg/>
-                </motion.a>
+
+                    </motion.div>
+                </Link>
             </motion.div>
         </motion.div>
     )

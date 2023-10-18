@@ -102,3 +102,14 @@ a {
         @content;
     }
 }
+
+::-webkit-scrollbar {
+    width: 6px;
+    position: absolute;
+    background-color: var(--background-color-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: var(--primary-color);
+}
