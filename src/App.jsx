@@ -16,29 +16,35 @@ function App() {
       <Routes key={location.pathname} location={location}>
         <Route path="/" element={
           <>
+          <AnimatePage>
             <LandingPage/>
+          </AnimatePage>
           </>
         }/>
         <Route path="/home" element={
           <>
-          <AnimatePage>
             <Navbar/>
-            <Home/>
-            <ContactSection/>
-          </AnimatePage>
+            <AnimatePage>
+              <Home/>
+              <ContactSection/>
+            </AnimatePage>
           </>
         }/>
         <Route path="/web-developer" element={
           <>
             <Navbar/>
-            <WebDev/>
-            <ContactSection/>
+            <AnimatePage>
+              <WebDev/>
+              <ContactSection/>
+            </AnimatePage>
           </>
         }/>
         <Route path="/*" element={
           <>
             <Navbar/>
-            <Maintenance/>
+            <AnimatePage>
+              <Maintenance/>
+            </AnimatePage>
           </>
         }/>
       </Routes>

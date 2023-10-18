@@ -22,35 +22,35 @@ function ContactSection () {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="mailto:lymar.paller101@gmail.com">
                                 <EmailSvg/>
                                 <p>lymar.paller101@gmail.com</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/lymar-paul-paller-b60a0a28b/">
                                 <LinkedinSvg/>
-                                <p>@placeholder</p>
+                                <p>Lymar Paul Paller</p>
                             </a>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="https://www.facebook.com/cantleavethisempty">
                                 <FacebookSvg/>
-                                <p>@placeholder</p>
+                                <p>@cantleavethisempty</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.instagram.com/touchmenot1994/">
                                 <InstagramSvg/>
-                                <p>@placeholder</p>
+                                <p>@touchmenot1994</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://twitter.com/Touch_MeN0t">
                                 <TwitterSvg/>
-                                <p>@placeholder</p>
+                                <p>@Touch_MeN0t</p>
                             </a>
                         </li>
                     </ul>
