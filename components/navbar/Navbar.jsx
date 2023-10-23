@@ -1,9 +1,10 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import "./navbar.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import LymarLogo from "../svg/LymarLogo"
 import { useState } from "react"
+import { motion } from "framer-motion"
 
 function Navbar () {
 
@@ -13,24 +14,52 @@ function Navbar () {
         setShowNavbar(!showNavbar)
     }
 
+    const onHoverAnimVariant = {
+        static: {
+            scale: 0,
+        },
+        hover: {
+            scale: 1.15
+        }
+    }
+
     return (
         <>
             <div className="navbar-container">
                 <LymarLogo/>
                 <nav className={`hidden-navbar ${showNavbar ? 'show-navbar' : ''}`}>
                     <ul className="navbar-wrapper">
-                        <li>
+
+                        <motion.li
+                        variants={onHoverAnimVariant}
+                        whileHover="hover"
+                        >
                             <NavLink to="/home">Home</NavLink>
-                        </li>
-                        <li>
+                        </motion.li>
+
+                        <motion.li
+                        variants={onHoverAnimVariant}
+                        whileHover="hover"
+                        >
                             <NavLink to="/web-developer">Web Dev</NavLink>
-                        </li>
-                        <li>
+                        </motion.li>
+
+                        <motion.li
+                        variants={onHoverAnimVariant}
+                        whileHover="hover"
+                        >
                             <NavLink to="/graphic">Graphic Design</NavLink>
-                        </li>
-                        <div className="button-container">
-                            <button>Download CV</button>
-                        </div>
+                        </motion.li>
+
+                        <motion.div
+                        className="button-container"
+                        variants={onHoverAnimVariant}
+                        whileHover="hover"
+                        >
+                            <a href="/Lymar Paul Paller - Updated Final.pdf">
+                                <button>Download CV</button>
+                            </a>
+                        </motion.div>
                     </ul>
                 </nav>
                 <div className="toggler-nav" onClick={toggleNavbar}>

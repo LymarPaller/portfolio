@@ -56,7 +56,7 @@ function Home () {
                             </div>
                         </Link>
                         
-                        <Link to="/web-developer">
+                        <Link to="/graphic-artist">
                             <div className="card artist-card">
                                 <div className="circle-card">
                                     <img src={graphicSvg} alt="graphic" className="artist-image" />
