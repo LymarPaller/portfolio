@@ -4,7 +4,6 @@
     display: flex;
     overflow: hidden;
     flex-wrap: nowrap;
-    
 }
 
 .landing-page-container{
@@ -54,4 +53,16 @@
         height: 2px;
     }
 
+}
+
+.loading-text {
+    position: absolute;
+    z-index: -1;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    p{
+        font-size: 1.5 rem;
+    }
 }

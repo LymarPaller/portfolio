@@ -3,7 +3,6 @@ import EnterSvg from "../../components/svg/EnterSvg"
 import LymarLogo from "../../components/svg/LymarLogo"
 import "./landingPage.scss"
 import { AnimatePresence, cubicBezier, easeIn, easeInOut, easeOut, motion, spring, stagger } from "framer-motion"
-import AnimatePage from "../../src/AnimatePage"
 
 function LandingPage () {
 
@@ -68,6 +67,7 @@ function LandingPage () {
     }
 
     return (
+        <>
         <motion.div 
         className="wrapper-reveal"
         variants={wrapperAnimVariantReveal}
@@ -93,15 +93,12 @@ function LandingPage () {
                 >
                     <motion.div
                     className="enter-button"
-                    initial={{y: -900, opacity: 0}}
+                    initial={{y: 100, opacity: 0}}
                     animate={{y: 0, opacity: 1}}
                     transition={{
                         delay: 5.5,
-                        duration: 1,
-                        y: {
-                            type: "spring",
-                            damping: 10,
-                        }
+                        duration: .8,
+                        ease: "easeInOut"
                     }}>
                         
                     <p>Check Portfolio</p>
@@ -111,6 +108,10 @@ function LandingPage () {
                 </Link>
             </motion.div>
         </motion.div>
+        <div className="loading-text">
+            <p>Loading...</p>
+        </div>
+        </>
     )
 }
 
