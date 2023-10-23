@@ -37,7 +37,7 @@
     }
 
     .tech-stacks-container{
-        height: 100vh;
+        height: 150vh;
         background-color: var(--container-bg-color);
         display: flex;
         justify-content: center;
@@ -47,7 +47,7 @@
         h1{
             text-align: center;
             color: var(--primary-color);
-            margin-bottom: 5rem;
+            margin-bottom: 8rem;
         }
 
         .tech-stacks-wrapper{
@@ -55,10 +55,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 5rem;
+            gap: 10rem;
 
             @include tabletMedium{
-                flex-direction: row;
+                flex-direction: column;
                 align-items: start;
             }
 
@@ -108,14 +108,14 @@
 }
 
 .projects-container{
-    height: 175vh;
+    height: 220vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
     @include tabletMedium{
-        height: 100vh;
+        height: 150vh;
     }
 
     h1{
@@ -188,6 +188,7 @@
 
                 h4{
                     font-size: var(--font-size-base);
+                    margin-top: 1rem;
 
                     @include tabletMedium{
                         font-size: var(--font-size-sm);
@@ -202,6 +203,13 @@
                     }
                 }
             }
+        }
+    }
+
+    a{
+        p{
+            text-decoration: underline;
+            color: var(--primary-color);
         }
     }
 }

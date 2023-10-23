@@ -99,6 +99,9 @@ function WebDev () {
                                     and sunset.
                                 </p>
 
+                                <h4>Tech Used:</h4>
+                                <p>HTML5, CSS, JAVASCRIPT</p>
+
                                 <h4>Link:</h4>
                                 <a href="https://kairos-weatherapp.vercel.app/">
                                     <p>kairos-weatherapp.vercel.app/</p>
@@ -124,6 +127,9 @@ function WebDev () {
                                     you can register, login, follow friends
                                     post status, like and comment
                                 </p>
+
+                                <h4>Tech Used:</h4>
+                                <p>HTML5, SASS, REACTJS, PHP, LARAVEL</p>
 
                                 <h4>Link:</h4>
                                 <a href="https://nexus-three-ruddy.vercel.app/login">
