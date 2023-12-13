@@ -13,6 +13,8 @@ import JavaScriptSvg from "../../components/svg/techStackSvg/JavaScriptSvg";
 import kairosImg from "../../images/kairos-sample.png";
 import nexusImg from "../../images/nexus-sample.png";
 import AppWrapper from "../../components/app-wrapper/AppWrapper";
+import { useActionData } from "react-router-dom";
+import { useEffect } from "react";
 
 function WebDev () {
     const frontEndArray = [
@@ -56,6 +58,10 @@ function WebDev () {
             svg: <SqlSvg/>
         }
     ]
+
+    useEffect(()=>{
+        document.title = "Lymar | Web Development";
+    }, [])
 
     return (
         <>

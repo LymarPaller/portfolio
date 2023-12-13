@@ -34,21 +34,21 @@ function Navbar () {
                         variants={onHoverAnimVariant}
                         whileHover="hover"
                         >
-                            <NavLink to="/home">Home</NavLink>
+                            <Link to="/home">Home</Link>
                         </motion.li>
 
                         <motion.li
                         variants={onHoverAnimVariant}
                         whileHover="hover"
                         >
-                            <NavLink to="/web-developer">Web Dev</NavLink>
+                            <Link to="/web-developer">Web Dev</Link>
                         </motion.li>
 
                         <motion.li
                         variants={onHoverAnimVariant}
                         whileHover="hover"
                         >
-                            <NavLink to="/graphic">Graphic Design</NavLink>
+                            <Link to="/graphic">Graphic Design</Link>
                         </motion.li>
 
                         <motion.div

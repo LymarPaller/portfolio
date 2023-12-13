@@ -8,6 +8,9 @@ function Maintenance () {
     let animationContainer = createRef();
 
     useEffect(()=> {
+
+        document.title = "Lymar | Graphic Design";
+
         const anim = lottie.loadAnimation({
              container: animationContainer.current,
              animationData: animation,
@@ -15,6 +18,7 @@ function Maintenance () {
              }
         })
         return () => anim.destroy();
+
     }, [])
 
     return (

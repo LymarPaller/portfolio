@@ -3,8 +3,13 @@ import webDevSvg from "../../images/iconHighlight1.svg"
 import graphicSvg from "../../images/iconHighlight2.svg"
 import { Link } from "react-router-dom"
 import profileRed from "../../images/profile-red small.png"
+import { useEffect } from "react"
 
 function Home () {
+
+    useEffect(()=>{
+        document.title = "Lymar | Home";
+    }, [])
 
     return (
         <>

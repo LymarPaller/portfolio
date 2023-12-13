@@ -3,6 +3,7 @@ import EnterSvg from "../../components/svg/EnterSvg"
 import LymarLogo from "../../components/svg/LymarLogo"
 import "./landingPage.scss"
 import { AnimatePresence, cubicBezier, easeIn, easeInOut, easeOut, motion, spring, stagger } from "framer-motion"
+import { useEffect } from "react"
 
 function LandingPage () {
 
@@ -65,6 +66,11 @@ function LandingPage () {
             },
         }
     }
+
+    
+    useEffect(()=>{
+        document.title = "Lymar Paul Paller";
+    }, [])
 
     return (
         <>
