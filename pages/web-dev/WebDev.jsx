@@ -12,6 +12,7 @@ import SqlSvg from "../../components/svg/techStackSvg/SqlSvg";
 import JavaScriptSvg from "../../components/svg/techStackSvg/JavaScriptSvg";
 import kairosImg from "../../images/kairos-sample.png";
 import nexusImg from "../../images/nexus-sample.png";
+import doctorsImg from "../../images/doctors.png";
 import AppWrapper from "../../components/app-wrapper/AppWrapper";
 import { useActionData } from "react-router-dom";
 import { useEffect } from "react";
@@ -170,6 +171,36 @@ function WebDev () {
 
                                 <h4>Link:</h4>
                                 <a href="https://nexus-three-ruddy.vercel.app/login">
+                                    <p>nexus-three-ruddy.vercel.app/login</p>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div className="nexus-container project-single-container">
+
+                            <div className="project-card">
+                                <img src={doctorsImg} alt="kairus sample image" />
+                            </div>
+
+                            <div className="project-details">
+
+                                <h4>Name:</h4>
+                                <p>Medicare</p>
+
+                                <h4>Description:</h4>
+                                <p>
+                                    Medicare is a collab project with my friend I am assigned as the backend 
+                                    but I also refactor some of the front end codes, it is a patient/doctor appointment application
+                                    which you can login and set an appointment to any
+                                    specialized doctors
+                                </p>
+
+                                <h4>Tech Used:</h4>
+                                <p>REACTJS, HTML5, CSS, TAILWIND, MONGODB</p>
+
+                                <h4>Link:</h4>
+                                <a href="https://hospital-management-lyart.vercel.app/">
                                     <p>nexus-three-ruddy.vercel.app/login</p>
                                 </a>
 

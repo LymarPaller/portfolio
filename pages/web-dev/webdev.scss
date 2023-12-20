@@ -115,7 +115,8 @@
     justify-content: center;
 
     @include tabletMedium{
-        height: 150vh;
+        height: auto;
+        padding-block: 7rem;
     }
 
     h1{
@@ -139,6 +140,8 @@
         @include tabletMedium{
             flex-direction: row;
             align-items: start;
+            width: 80%;
+            flex-wrap: wrap;
             gap: 9vw;
         }
 
